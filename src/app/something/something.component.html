@@ -1,0 +1,32 @@
+<div class="container">
+
+    <h1 class="something-header"><i class="far fa-copy"></i> Invoices List</h1>
+
+    <p>
+      <a  [routerLink]="[]" (click)="create_invoice()"><i class="far fa-calendar-plus"></i> Create Invoice </a>
+    </p>
+
+    <div class="something-container row">
+      <div *ngFor="let data of dataInvoice">
+        <div class="col-sm">
+          <div class="something-container-description">
+            <p>
+              <a [routerLink]="['/detail/', data.IdInvoice]"><strong>Invoice # {{data.IdInvoice}}</strong> </a>
+            </p>
+            <p class="something-container-description-line">
+              <i class="fas fa-calendar-alt"></i> Date: {{data.InvoiceDate}}
+            </p>
+            <p class="something-container-description-line">
+              <i class="fas fa-chart-bar"></i> Amount: {{data.Amount}}
+            </p>
+            <p class="something-container-description-line">
+              <i class="fas fa-chart-bar"></i> TotalAmount: {{data.TotalAmount}}
+            </p>
+            <p class="something-container-description-line">
+              <i class="fas fa-chart-bar"></i> TotalTax {{data.TotalTax}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

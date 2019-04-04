@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="something-header"><i class="far fa-copy"></i> Invoices Detail List</h1>
+    <a [routerLink]="['/']"><i class="far fa-paper-plane"></i> Back</a>
+    <div class="something-container row">
+      <div *ngFor="let data of detail">
+          <div class="col-sm">
+            <div class="something-container-description">
+              <p><strong>Invoice # {{data.IdInvoice}}</strong></p>
+              <p class="something-container-description-line">Invoice Details # {{data.IdInvoiceDetail}}</p>
+              <p class="something-container-description-line">Item # {{data.IdItem}}</p>
+              <p class="something-container-description-line">Quantity: {{data.Quantity}}</p>
+              <p class="something-container-description-line">Price: {{data.Price}}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+</div>
